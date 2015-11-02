@@ -11,7 +11,6 @@
         <menus>
             <Menu fx:id="mnuGame" mnemonicParsing="false" text="Game">
               <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
                   <MenuItem mnemonicParsing="false" text="5 Card Joker Poker" />
                   <MenuItem mnemonicParsing="false" text="5 Card Wild Poker" />
                   <MenuItem mnemonicParsing="false" text="7 Card  Draw" />

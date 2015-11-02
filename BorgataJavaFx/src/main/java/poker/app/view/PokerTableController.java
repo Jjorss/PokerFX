@@ -421,25 +421,32 @@ public class PokerTableController {
 		fadeInTransition.setFromValue(0.0);
 		fadeInTransition.setToValue(1.0);
 
-		/*
-		TranslateTransition translateTransition = new TranslateTransition(Duration.millis(500), ivStart);
+		
+		
+		
+		/*TranslateTransition translateTransition = new TranslateTransition(Duration.millis(1000), ivStart);
+		
+		Bounds end = h1P1.localToScene(h1P1.getBoundsInLocal());
+		Bounds Start = HboxCommonArea.localToScene(HboxCommonArea.getBoundsInLocal());
+		
+		HboxCommonArea.getChildren().remove(ivStart);
+		APMainScreen.getChildren().add(ivStart);
+		
+		translateTransition.setFromX(Start.getMinX());
+		translateTransition.setToX(end.getMinX() - 10);
+		translateTransition.setFromY(Start.getMinY());
+		translateTransition.setToY(end.getMinY() - 25);
+		
+		translateTransition.setCycleCount(1);
+		translateTransition.setAutoReverse(false);*/
 
-		
-		translateTransition.setFromX(0);
-		translateTransition.setToX(ivX - ivStartX1);
-		translateTransition.setFromY(0);
-		translateTransition.setToY(ivY - ivStartY1);
-		
-		translateTransition.setCycleCount(2);
-		translateTransition.setAutoReverse(false);
-*/
-//		RotateTransition rotateTransition = new RotateTransition(Duration.millis(150), ivStart);
-//		rotateTransition.setByAngle(90f);
-//		rotateTransition.setCycleCount(1);
-//		rotateTransition.setAutoReverse(false);
+	RotateTransition rotateTransition = new RotateTransition(Duration.millis(150), iv);
+		rotateTransition.setByAngle(360f);
+		rotateTransition.setCycleCount(1);
+		rotateTransition.setAutoReverse(false);
 		
 		ParallelTransition parallelTransition = new ParallelTransition();
-		parallelTransition.getChildren().addAll(fadeOutTransition, fadeInTransition);
+		parallelTransition.getChildren().addAll(fadeOutTransition, fadeInTransition, rotateTransition); 
 
 		return parallelTransition;
 	}

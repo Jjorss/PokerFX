@@ -1,12 +1,16 @@
 .background {
-    -fx-background-color: #1d1d1d;
+    -fx-background-color: #317730;
 }
 
 .label {
-    -fx-font-size: 11pt;
+    -fx-font-size: 17pt;
     -fx-font-family: "Segoe UI Semibold";
-    -fx-text-fill: black;
+    -fx-text-fill: #FFFFFF;
     -fx-opacity: 0.6;
+}
+
+.hbox {
+	-fx-background-color: #23B32F;
 }
 
 .label-bright {
